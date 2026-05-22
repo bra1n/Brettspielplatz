@@ -12,11 +12,9 @@ export default function News() {
     useEffect(() => {
       async function fetchNews() {
         setLoading(true)
-
         const response = await fetch(`https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=0`)
         const data = await response.text()
         setNews(parse(data, { columns: true, skip_empty_lines: true }).slice(0, 10))
-
         setLoading(false)
       }
       fetchNews()
