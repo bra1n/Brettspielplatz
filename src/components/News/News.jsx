@@ -1,22 +1,21 @@
 import "./news.css"
 import { useState, useEffect } from "react"
+import { parse } from "csv-parse/browser/esm/sync";
 import BeatLoader from 'react-spinners/BeatLoader'
 
 export default function News() {
     const [news, setNews] = useState([])
     const [isLoading, setLoading] = useState(false)
 
-    const API_KEY = "AIzaSyCklZWwaXvgmkfyq61E67DXNGpgYAwTapg"
     const SHEET_ID = "1uamZ6CFNVrjcLWGxaUhYijae1KqS3AsewA7qpn1XZhk"
-    const SHEET_TAB_NAME = "News"
 
     useEffect(() => {
       async function fetchNews() {
         setLoading(true)
 
-        const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_TAB_NAME}?alt=json&key=${API_KEY}`)
-        const data = await response.json()
-        setNews(data.values.slice(1,10))
+        const response = await fetch(`https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=0`)
+        const data = await response.text()
+        setNews(parse(data, { columns: true, skip_empty_lines: true }).slice(0, 10))
 
         setLoading(false)
       }
@@ -25,10 +24,10 @@ export default function News() {
 
     const newsElements = news.map(news => {
       return (
-        <div className="news shadow" key={news[0]}>
-          <img src={news[1]} className="news--image" />
-          <p className="news--date">{news[0]}</p>
-          <p className="news--content justified">{(news[2])}</p>
+        <div className="news shadow" key={news.Date}>
+          <img src={news.Image} className="news--image" alt="" />
+          <p className="news--date">{news.Date}</p>
+          <p className="news--content justified">{(news.Body)}</p>
         </div>
       )
     })
@@ -40,7 +39,7 @@ export default function News() {
           <div className="section--news--loader">
             <BeatLoader color={"#00B0B2"}/>
           </div>
-          ) : 
+          ) :
           (
             <div className="section--news--newsitems">
               {newsElements}

@@ -1,13 +1,13 @@
 import "./games.css"
 import Game from "./Game"
 import { useState, useEffect } from "react"
+import { parse } from "csv-parse/browser/esm/sync";
 import BeatLoader from 'react-spinners/BeatLoader'
 import { Grid, Box, MenuItem, FormControl, InputLabel, Select, Slider, Typography, TextField } from '@mui/material';
 import { Button, Collapse } from '@mui/material';
 
-export default function Games() {    
+export default function Games() {
   const [games, setGames] = useState([])
-  const [gameNames, setGameNames] = useState([])
   const [searchInput, setSearchInput] = useState(null)
   const [isLoading, setLoading] = useState(false)
   const [playerCount, setPlayerCount] = useState("");
@@ -16,19 +16,16 @@ export default function Games() {
   const [language, setLanguage] = useState("Alle");
   const [showFilters, setShowFilters] = useState(false);
 
-  const API_KEY = "AIzaSyCklZWwaXvgmkfyq61E67DXNGpgYAwTapg"
   const SHEET_ID = "1Jn6LMK_MDTWrT_bZ8HjB6tLNpUHbsH-8w3I6y38dYlA"
-  const SHEET_TAB_NAME = "Spieleliste"
 
   useEffect(() => {
     async function fetchGames() {
       setLoading(true)
 
-      const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_TAB_NAME}?alt=json&key=${API_KEY}`)
-      const data = await response.json()
+      const response = await fetch(`https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=0`)
+      const data = await response.text()
 
-      const gamesArray = data.values.slice(1)
-      setGames(gamesArray)
+      setGames(parse(data, { columns: true, skip_empty_lines: true }))
       setLoading(false)
     }
     fetchGames()
@@ -55,42 +52,42 @@ export default function Games() {
 
   // per default display all games
   const displayedGames = games.filter(game => {
-    const name = game[0] || "";
+    const name = game.Spiel || "";
     const matchesSearch = !searchInput ||
       name.toLowerCase().includes(searchInput.toLowerCase());
 
     if (game.length <= 1) return matchesSearch;
 
     const count = parseInt(playerCount);
-    const matchesPlayers = !isNaN(count) && game[1] && game[2]
-      ? (count >= parseInt(game[1]) && count <= parseInt(game[2]))
+    const matchesPlayers = !isNaN(count) && game["Spieler Min"] && game["Spieler Max"]
+      ? (count >= parseInt(game["Spieler Min"]) && count <= parseInt(game["Spieler Max"]))
       : true;
 
-    const comp = game[6] ? parseFloat(game[6].toString().replace(',', '.')) : 0;
+    const comp = game["Complexity"] ? parseFloat(game["Complexity"].toString().replace(',', '.')) : 0;
     const matchesComplexity = isNaN(comp) || comp <= maxComplexity;
 
     const matchesDuration = (maxDuration >= 240)
-      ? true                                   
-      : (parseInt(game[5]) || 0) <= maxDuration;
+      ? true
+      : (parseInt(game["Spieldauer Max"]) || 0) <= maxDuration;
 
     const matchesLanguage = language === "Alle" ||
-      (game[8] && game[8].toLowerCase() === language.toLowerCase());
+      (game["Sprache"] && game["Sprache"].toLowerCase() === language.toLowerCase());
 
     return matchesSearch && matchesPlayers && matchesComplexity && matchesDuration && matchesLanguage;
   });
 
-  const gameElements = displayedGames.map(game => 
+  const gameElements = displayedGames.map(game =>
     <Game
-      key={game[0]}
-      name={game[0]}
-      playersMin={game[1]}
-      playersMax={game[2]} 
-      lengthMin={game[4]} 
-      lengthMax={game[5]} 
-      complexity={game[6]} 
-      bggId={game[7]}
-      language={game[8]} 
-      childGame={game[9]}
+      key={game["Spiel"]}
+      name={game["Spiel"]}
+      playersMin={game["Spieler Min"]}
+      playersMax={game["Spieler Max"]}
+      lengthMin={game["Spieldauer Min"]}
+      lengthMax={game["Spieldauer Max"]}
+      complexity={game["Complexity"]}
+      bggId={game["BGG ID"]}
+      language={game["Sprache"]}
+      childGame={game["Kinderspiel"]}
       onClick={openBGG}
     />
   )
