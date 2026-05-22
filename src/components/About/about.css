@@ -9,11 +9,36 @@
   max-width: 100%;
   max-height: 40vh;
 }
-
 .section--about--gallery {
   width: 90%;
   margin-top: 1em;
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
   grid-gap: 10px;
+}
+
+.section--about--tisch {
+  max-width: 100%;
+}
+
+@media (min-width: 700px) {
+  .section--about--promo {
+    display: flex;
+    gap: 10px;
+    align-items: start;
+    justify-content: center;
+  }
+  .section--about--tisch {
+    max-width: 40%;
+    max-height: 40vh;
+  }
+}
+
+
+
+
+.section--about--logo {
+  max-width: 40%;
+  max-height: 40vh;
+  margin-top: 10px;
 }

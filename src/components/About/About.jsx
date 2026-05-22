@@ -14,6 +14,8 @@ import laden5 from '../../assets/laden5.jpg'
 import laden5_tb from '../../assets/laden5_tb.jpg'
 import laden6 from '../../assets/laden6.jpg'
 import laden6_tb from '../../assets/laden6_tb.jpg'
+import tisch from '../../assets/woodencastle.jpg'
+import wclogo from '../../assets/woodencastle.png'
 
 export default function About() {
   const images = [
@@ -87,7 +89,7 @@ export default function About() {
     <section className="content maxWidth1200">
       <h1 className="title supersonic">Über uns</h1>
       <div className="tile shadow">
-        <img src={hero} className="section--about--hero"/>
+        <img src={hero} className="section--about--hero" alt=""/>
         <h2 className="section--about--heading supersonic">Willkommen in Berlins größtem Brettspielecafé!</h2>
         <p className="justified">Im Herzen Moabits bieten wir euch bei Kaffee, Waffeln und
           Süßgetränken <span className="supersonic">über 550 Spiele</span> zum ausgiebigen Spielen und Genießen an.
@@ -106,6 +108,23 @@ export default function About() {
             {imageElements}
           </div>
         </Gallery>
+
+        <h2 className="section--about--heading supersonic">Mit freundlicher Unterstützung von Wooden Castle</h2>
+        <div className="section--about--promo">
+          <img src={tisch} className="section--about--tisch" alt=""/>
+          <p>
+            Wir können euch außerdem einen echten Spieletisch aus professioneller
+            Herstellung anbieten. Der <span className="supersonic">"Adventure" Tisch von Wooden Castle</span> bietet
+            neben einer mit Filz
+            bezogenen Spielfläche zusätzlich optionale Annehmlichkeiten wie Getränkehalter, LED-Beleuchtung,
+            Token-Halter und mehr. Probiert ihn gerne bei eurem nächsten Aufenthalt bei uns aus!<br/><br/>
+            Mehr Informationen zum Tisch findet ihr auf der Seite von<br/>
+            <a href="https://wooden-castle.com/avalible-models/" target="_blank" rel="noreferrer">
+              <img src={wclogo} className="section--about--logo" alt=""/>
+            </a>
+          </p>
+        </div>
+
       </div>
     </section>
   )
