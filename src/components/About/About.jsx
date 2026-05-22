@@ -115,9 +115,8 @@ export default function About() {
           <p>
             Wir können euch außerdem einen echten Spieletisch aus professioneller
             Herstellung anbieten. Der <span className="supersonic">"Adventure" Tisch von Wooden Castle</span> bietet
-            neben einer mit Filz
-            bezogenen Spielfläche zusätzlich optionale Annehmlichkeiten wie Getränkehalter, LED-Beleuchtung,
-            Token-Halter und mehr. Probiert ihn gerne bei eurem nächsten Aufenthalt bei uns aus!<br/><br/>
+            neben einer mit weichem Velour bezogenen Spielfläche zusätzlich optionale Annehmlichkeiten wie Getränkehalter, 
+            LED-Beleuchtung, Token-Halter und mehr. Probiert ihn gerne bei eurem nächsten Aufenthalt bei uns aus!<br/><br/>
             Mehr Informationen zum Tisch findet ihr auf der Seite von<br/>
             <a href="https://wooden-castle.com/avalible-models/" target="_blank" rel="noreferrer">
               <img src={wclogo} className="section--about--logo" alt=""/>
