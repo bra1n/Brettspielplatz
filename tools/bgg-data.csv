@@ -1,0 +1,588 @@
+BGG ID,Name (sheet),"Name (BGG, if different)",Min Players,Max Players,Best Players,Min Time,Max Time,Complexity
+5,Acquire,,2,6,4,90,90,2.49
+10,Elfenland,,2,6,4,60,60,2.15
+13,Siedler von Catan,Catan,3,4,4,60,120,2.28
+42,Euphrat & Tigris,Tigris & Euphrates,2,4,4,60,120,3.47
+66,Löwenherz,,2,4,4,60,90,2.78
+93,El Grande,,2,5,5,60,120,2.93
+118,Modern Art,,3,5,4-5,45,45,2.28
+118,Modern Art,,3,5,4-5,45,45,2.28
+120,Adel verpflichtet,Hoity Toity,2,5,"5, 6+",45,45,1.86
+152,Mü und mehr,Mü & More,2,8,5,60,60,2.56
+181,Risiko,Risk,2,6,4,120,120,2.06
+188,Go,,2,2,2,30,180,3.91
+215,Tichu,,3,10,4,30,90,2.34
+217,A la Carte,,2,4,4,30,30,1.3
+320,Scrabble,,2,4,2,90,90,2.05
+337,Zirkus Flohcati,Circus Flohcati,2,5,4,15,15,1.23
+432,6nimmt,Take 5,2,10,5-6,45,45,1.19
+478,Ohne Furcht und Adel,Citadels,2,8,5,20,60,2.05
+499,Das Baumspiel Arbos,Arbos,1,8,4-5,30,30,1
+521,Crokinole,,2,4,"2, 4",30,30,1.23
+526,Abalone,,2,2,2,30,30,2.14
+559,Metro,,2,6,2,30,30,1.68
+811,Rummikub,,2,4,4,60,60,1.71
+822,Carcassonne,,2,5,2,30,45,1.88
+823,Der Herr der Ringe,The Lord of the Rings,2,5,4,60,90,2.53
+891,Cranium,,4,99,8,60,60,1.42
+929,Der große Dalmuti,The Great Dalmuti,4,8,6-7,60,60,1.28
+938,Sagaland,Enchanted Forest,2,6,4,30,60,1.24
+943,Ligretto,,2,4,4,10,10,1.17
+1111,Tabu,Taboo,4,10,"6, 8",20,20,1.2
+1115,Poker,,2,10,5-6,60,60,2.42
+1117,Kuhhandel,You're Bluffing!,3,5,5,45,45,1.63
+1198,Set,,1,20,3-4,30,30,1.65
+1219,Das verrückte Labyrinth,Labyrinth,2,4,4,20,20,1.35
+1269,Skip-Bo,,2,6,4,20,20,1.19
+1307,Gruselino,Haunted Castle,2,4,2,10,10,1
+1406,Monopoly,,2,8,4,60,180,1.62
+1406,Monopoly,,2,8,4,60,180,1.62
+1927,Munchkin,,3,6,4,60,120,1.82
+2223,Uno,,2,10,4-6,30,30,1.1
+2243,Kniffel,Yahtzee,2,10,3-4,30,30,1.17
+2338,Sternenschiff Catan,Starship Catan,2,2,2,60,60,2.46
+2397,Backgammon,,2,2,2,30,30,2
+2397,Backgammon,,2,2,2,30,30,2
+2511,Sherlock Holmes: Consulting Detective,Sherlock Holmes Consulting Detective: The Thames Murders & Other Cases,1,8,2,60,120,2.66
+2596,Villa Paletti,,2,4,4,30,30,1.16
+2655,Hive,,2,2,2,20,20,2.31
+2719,4 Gewinnt,Connect Four,2,2,2,10,10,1.18
+3208,Drachenland,Dragonland,2,4,3-4,45,45,1.84
+3343,Mankomania,Go For Broke,2,6,4,45,60,1.11
+3507,Au Backe!,By Golly!,2,6,3,15,15,1.07
+3955,Bang,BANG!,4,7,7,20,40,1.63
+5072,Carrom,,2,4,2,60,60,1.46
+5149,Bedlam,,3,6,,45,45,1
+6424,Mikado,Pick Up Sticks,2,6,3,10,30,1.06
+6779,The Ark of the Covenant,,2,5,3-4,30,30,1.93
+7688,Memory Tierbabys,Memory,2,6,2,30,30,1.14
+8107,Risiko Herr der Ringe,Risk: The Lord of the Rings Trilogy Edition,2,4,4,180,180,2.36
+8295,Das Geheimnis der Pyramiden,Secrets of the Pyramids,2,4,2,15,15,1.09
+8829,Nobody is perfect,,3,10,"5-6, 8",45,45,1.53
+8946,DaVinci Code,Da Vinci Code,2,4,4,15,15,1.48
+9209,Zug um Zug,Ticket to Ride,2,5,4,30,60,1.82
+9220,Saboteur,,3,10,7-8,30,30,1.32
+10547,Betrayall at house on the hill,Betrayal at House on the Hill,3,6,5-6,60,60,2.4
+10547,Betrayall at house on the hill,Betrayal at House on the Hill,3,6,5-6,60,60,2.4
+10645,Mutabor In Kalif's Labyrinth Garden,Mutabor: Im Irrgarten des Kalifen,2,4,4,30,30,2.5
+10802,Kai Piranha,Somethin' Fishy,3,6,4,15,15,1.27
+11971,Kakerlakenpoker,Cockroach Poker,2,6,5,20,20,1.1
+12333,Gleichgewicht des Schreckens,Twilight Struggle,2,2,2,120,180,3.61
+15209,Linja,,2,2,2,15,15,1.86
+15987,Arkham Horror,,1,8,4,120,240,3.59
+15987,Arkham Horror Boardgame,Arkham Horror,1,8,4,120,240,3.59
+16986,Ubongo,,1,4,4,25,25,1.5
+16992,Tsuro,,2,8,"4, 6",15,20,1.22
+17133,Railways of the World,,2,6,5,120,120,3.02
+18163,Balancing Moon with stacking Blocks,Balancing Moon,1,4,4,10,10,1
+18602,Caylus,,2,5,3,60,150,3.79
+18803,Black Stories,,2,99,4-6,20,20,1.26
+20080,Aqua Romana,,2,4,3,45,60,2.16
+20195,Six,,2,4,2,20,20,1.62
+21241,Neuroshima Hex,,2,4,2,30,30,2.61
+21763,Mr. Jack,,2,2,2,30,30,2.17
+22348,Meisterwerke,Duplik,3,10,5-6,45,45,1.21
+22664,Phase 10 Masters,Phase 10 Masters Edition,2,6,4,120,120,1.41
+25669,Qwirkle,,2,4,4,45,45,1.57
+25821,Werwölfe von Düsterwald,The Werewolves of Miller's Hollow,8,18,10-14,30,30,1.31
+27588,Zooloretto,,2,5,4,45,45,1.86
+27710,Die Siedler von Catan Das Würfelspiel,Catan Dice Game,1,4,2,15,30,1.23
+28143,Race for the Galaxy,,2,4,2,30,60,2.99
+28720,Brass Lancashire,Brass: Lancashire,2,4,4,60,120,3.84
+29223,Marrakech,,2,4,4,30,30,1.33
+29678,Munchkin Quest,,2,4,4,180,180,2.51
+29805,Ein bisschen Mord muss sein,Petits Meurtres & Faits Divers,4,7,7,45,45,1.74
+30549,Pandemic,,2,4,4,45,45,2.39
+30869,Jenseits von Theben,Thebes,2,4,3-4,60,60,2.15
+31260,Agricola,,1,5,3-4,30,150,3.64
+31479,Ubongo Extrem,Ubongo Extreme,2,4,3-4,30,30,1.87
+31481,Galaxy Trucker,,2,4,4,60,60,2.33
+33898,TKKG Das Phantom der Nacht,TKKG: Das Phantom der Nacht,2,4,,30,30,3
+34084,Wie verhext,Witch's Brew,3,5,5,30,60,1.87
+34585,Keltis,,2,4,3,30,30,1.64
+34599,Toledo,,2,4,4,45,60,2.18
+34635,Stone Age,,2,4,4,60,90,2.45
+35497,Fauna,,2,6,4-5,45,60,1.44
+35677,Le Havre,,1,5,3,30,150,3.71
+36218,Dominion Was für eine Welt (basisspiel),Dominion,2,4,3,30,30,2.34
+36218,Dominion Basisspiel,Dominion,2,4,3,30,30,2.34
+37111,Battlestar Galactica,Battlestar Galactica: The Board Game,3,6,5,120,180,3.25
+37907,Diamonds Club,,2,4,4,60,75,2.61
+38001,Black Stories Das Spiel,Black Stories: Das Spiel,3,13,5-8,20,222,1.4
+38538,Munchkin Quest 2,Munchkin Quest 2: Looking for Trouble,2,6,3-5,180,180,2.32
+38545,Kamisado,,2,2,2,20,20,2.35
+39463,Cosmic Encounter,,3,5,5,60,120,2.58
+39683,Vor den Toren von Loyang,At the Gates of Loyang,1,4,2,60,120,3.11
+39856,Dixit,,3,6,5-6,30,30,1.19
+40393,Fits,,1,4,4,45,45,1.39
+40398,Monopoly Deal,Monopoly Deal Card Game,2,5,4,15,15,1.31
+40628,Finca,,2,5,2,45,45,2.07
+40692,Small World,,2,5,4,40,80,2.35
+40834,Dominion Die Intrige,Dominion: Intrigue,2,6,3,30,30,2.41
+41114,Der Widerstand,The Resistance,5,10,7,30,30,1.59
+41916,Das magische Labyrinth,The Magic Labyrinth,2,4,3-4,20,30,1.21
+42528,Die Tore der Welt,Tranzyt,2,6,,120,120,2
+42636,Gemischtes Doppel,,1,6,3,30,30,1.29
+42644,Activity Junior,,2,12,"4, 6, 8, 10",30,30,1
+42644,Activity Junior,,2,12,"4, 6, 8, 10",30,30,1
+43111,Cha's in der alten Welt,Chaos in the Old World,3,4,4,60,120,3.19
+46213,Stille Post Extrem,Telestrations,4,8,8,30,30,1.07
+50381,Cards against Humanity,,4,30,6-8,30,30,1.17
+51811,Dominion Seaside,Dominion: Seaside,2,4,3,30,30,2.49
+59223,Diego Drachenzahn,,2,4,4,15,15,1.14
+62219,Dominant Species,,2,6,4,120,240,4.04
+65244,Die verbotene Insel,Forbidden Island,2,4,4,30,30,1.74
+66056,Catan Das Duell,Rivals for Catan,2,2,2,45,60,2.33
+66098,Dominion Die Alchemisten,Dominion: Alchemy,2,4,3,30,30,2.44
+66188,Fresko,Fresco,2,4,4,60,60,2.64
+66690,Dominion Blütezeit,Dominion: Prosperity,2,4,3,30,30,2.47
+68448,7Wonders,7 Wonders,2,7,4-5,30,30,2.31
+70128,Gemischtes Doppel 2,,1,4,,30,30,1
+70149,Ora et Labora,,1,4,3,60,180,3.89
+70323,King of Tokyo,,2,6,4-5,30,30,1.48
+72991,Asara: Land der 1000 Türme,Asara,2,4,4,45,60,2.34
+73439,Troyes,,1,4,3,90,90,3.37
+73664,Cabo,,2,5,4,30,30,1.41
+84876,Die Burgen von Burgund,The Castles of Burgundy,2,4,2,30,90,2.97
+90870,Uluru,Pelican Cove,1,5,5,30,30,1.82
+91671,Da ist der Wurm drin,,2,4,4,15,20,1
+92644,Schnappt Hubi,Schnappt Hubi!,2,4,3-4,20,20,1.3
+92828,Dixit Odysee,Dixit: Odyssey,3,12,6,30,30,1.16
+96345,Funny Stories,Black Stories: Funny Death Edition,2,15,4-6,20,20,1
+96345,Black Stories Funny death edition,Black Stories: Funny Death Edition,2,15,4-6,20,20,1
+102548,Dungeon Fighter,,1,6,3-4,45,60,1.76
+102680,Trajan,,2,4,4,60,120,3.62
+102794,Caverna,Caverna: The Cave Farmers,1,7,4,30,210,3.78
+103343,Der Eiserne Thron,A Game of Thrones: The Board Game (Second Edition),3,6,6,120,240,3.73
+103885,Star Wars X-Wing: Miniaturen-Spiel,Star Wars: X-Wing Miniatures Game,2,2,2,30,45,2.49
+104006,Village,,2,4,4,60,90,3.06
+104162,Descent: Die Reise ins Dunkle,Descent: Journeys in the Dark (Second Edition),1,5,5,120,120,3.22
+104557,Dominion Hinterland,Dominion: Hinterlands,2,4,3,30,30,2.54
+104627,Feudalia,,1,4,2,90,90,3.14
+105593,Mogel Motte,Cheating Moth,3,5,5,30,30,1.16
+107529,Kingdom Builder,,2,4,4,45,45,2.07
+110327,Lords of Waterdeep,,2,5,3-4,60,120,2.45
+112373,Brave Rats,BraveRats,2,2,2,15,15,1.13
+115746,Der Ringkrieg,War of the Ring: Second Edition,2,4,2,150,240,4.23
+115746,War of the Ring,War of the Ring: Second Edition,2,4,2,150,240,4.23
+117959,Las Vegas,,2,5,4,30,30,1.17
+118410,Drecksau,Dirty Pig,2,4,4,10,10,1.05
+120677,Terra Mystica,,2,5,4,60,150,3.97
+121193,Cover your Assets,,2,6,4-5,20,40,1.2
+121921,Robinson Crusoe,Robinson Crusoe: Adventures on the Cursed Island,1,4,1-2,60,120,3.83
+122515,Keyflower,,2,6,4,90,120,3.33
+122522,Smash Up,,2,4,3,45,45,2.06
+123260,Suburbia,,1,4,3,60,90,2.76
+124361,Concordia,,2,5,4,100,100,2.98
+125153,The Gallerist,,1,4,3-4,60,150,4.21
+126042,Nations,,1,5,3-4,40,200,3.54
+126163,Tzolk'in,Tzolk'in: The Mayan Calendar,2,4,4,90,90,3.66
+127023,Kemet,,2,5,4-5,90,120,3.01
+127771,Wortissimo,Wortissimo: Der schnelle Wortsport,1,6,2-4,0,0,2
+129622,Love Letter,,2,4,4,20,20,1.18
+130592,Cluedo,Clue,2,6,4,40,40,1.48
+131014,Carcassonne Winteredition,Carcassonne: Winter Edition,2,5,2,40,40,1.78
+131260,Qwixx,,2,5,3-4,15,15,1.11
+131357,Coup,,2,6,5,15,15,1.41
+132531,Roll for the Galaxy,,2,5,3-4,45,45,2.78
+132532,Fische Angeln,"Here, Fishy, Fishy!",1,4,2-3,5,5,1
+133473,Sushi Go,Sushi Go!,2,5,4,15,15,1.16
+134642,Wer im Raum?,Vem i rummet,3,99,5-8,15,45,1
+137297,Augustus,Rise of Augustus,2,6,3-4,30,30,1.64
+142132,Dominion Big Box,Dominion: Big Box,2,4,2,30,30,2.5
+142271,Blitz Dings,Anomia: Party Edition,3,6,5-6,30,30,1.04
+143884,Machi Koro,,2,4,4,30,30,1.52
+144733,Russian Railroads,,2,4,4,120,120,3.4
+146021,Eldritch Horror,,1,8,4,120,240,3.32
+146152,Flash 10,,2,5,4,20,20,1
+146312,"Geister, Geister, Schatzsuchmeister",Ghost Fightin' Treasure Hunters,2,4,4,30,30,1.62
+146508,Time Stories,T.I.M.E Stories,2,4,4,90,90,2.58
+146652,Legendary Encounters Alien,Legendary Encounters: An Alien Deck Building Game,1,5,3,30,60,2.71
+147020,Star Realms,,2,2,2,20,20,1.91
+147151,Concept,,4,12,6,40,40,1.38
+147949,Werwölfe Vollmondnacht,One Night Ultimate Werewolf,3,10,6-8,10,10,1.38
+148228,Splendor,,2,4,3,30,30,1.77
+148949,Istanbul,,2,5,4,40,60,2.59
+148949,Istanbul,,2,5,4,40,60,2.59
+150145,Skull King,,2,8,4-5,30,30,1.73
+150376,Winter der Toten,Dead of Winter: A Crossroads Game,2,5,4,60,120,3.01
+152390,Das rhetorische Quartett,Rhetorisches Quartett,2,6,,20,60,
+153077,Kakerlakentanz,,2,6,,10,20,1
+155068,Arcadia Quest,,2,4,4,60,60,2.53
+155203,Nobody's perfect,Nobody is Perfect: 20th Anniversary Edition,3,10,6-8,60,60,1.25
+155426,Die Schlösser des König Ludwig,Castles of Mad King Ludwig,1,4,4,90,90,2.65
+155821,Inis,,2,4,4,60,90,2.95
+155873,Funkenschlag,Power Grid Deluxe: Europe/North America,2,6,4-5,120,120,3.2
+156009,Port Royal Kartenspiel,Port Royal,2,5,3-4,20,50,1.63
+156129,Deception: Murder in Hong Kong,,4,12,6-8,20,20,1.6
+156546,Monikers,,4,16,"6, 8, 10",30,60,1.09
+157354,Five Tribes,Five Tribes: The Djinns of Naqala,2,4,2,40,80,2.84
+157809,Nations: The Dice Game,,1,4,2-3,20,40,2.01
+158899,Colt Express,,2,6,5-6,40,40,1.83
+159566,Einhorn Glitzerglück Der Wolkenschatz,Unicorn Glitterluck: Cloud Crystals,2,4,3-4,10,10,1.24
+159675,Arler Erde,Fields of Arle,1,2,2,60,120,3.85
+160010,Conan,,2,5,4,90,90,2.79
+161533,Lisboa,,1,4,3,60,120,4.56
+161936,Pandemic Legacy,Pandemic Legacy: Season 1,2,4,4,60,60,2.83
+161970,Die Alchemisten,Alchemists,2,4,4,120,120,3.92
+162286,Super Motherload,,2,4,2,60,60,2.27
+162886,Spirit Island,,1,4,2,90,120,4.08
+163166,One Night Ultimate Daybreak,One Night Ultimate Werewolf: Daybreak,3,10,6-8,10,10,1.41
+163412,Patchwork,,2,2,2,15,30,1.6
+163602,XCOM,XCOM: The Board Game,1,4,4,60,120,2.91
+164153,Imperial Assault,Star Wars: Imperial Assault,2,5,"2, 5",60,120,3.3
+164589,Roar-a-Saurus,,2,5,4,15,15,1.21
+164928,Orleans,Orléans,2,5,4,90,90,3.01
+165948,Mangrovia,,2,5,4,75,75,2.42
+166384,Agent Undercover,Spyfall,3,8,6,15,15,1.23
+167355,Nemesis,,1,5,4-5,90,180,3.49
+167791,Terraforming Mars,,1,5,3,120,120,3.27
+168680,Werwolf Der Pakt,The Werewolves of Miller's Hollow: The Pact,9,47,12-16,40,40,2.08
+168681,Beyond Baker Street,,2,4,"2, 4",30,30,2.17
+169786,Scythe,,1,5,4,115,115,3.45
+170042,Raiders of the north sea,,2,4,3,60,80,2.57
+170216,Blood Rage,,2,4,4,60,90,2.88
+171129,Spinderella,,2,4,3-4,20,20,1.21
+171623,Marco Polo,The Voyages of Marco Polo,2,4,4,40,100,3.18
+172225,Exploding Kittens,,2,5,4-5,15,15,1.08
+172287,Champions of Midgard,,2,4,4,60,90,2.62
+172307,Das Spiel des Lebens,The Game of Life (2013- Editions),2,4,4,60,60,1.18
+172308,Broom Service,,2,5,4,30,75,2.39
+172386,Mombasa,,2,4,4,75,150,3.89
+172818,Above and below,,2,4,3,90,90,2.52
+173346,7 Wonders Duel,,2,2,2,30,30,2.23
+175155,Verbotene Welten,Forbidden Stars,2,4,3,120,180,3.84
+175324,Fog of Love,,2,2,2,60,120,2.25
+175878,504,,2,4,4,30,120,3.46
+175914,Food Chain Magnate,,2,5,3-4,120,240,4.18
+176165,Dale of Merchants,,2,4,2-3,30,30,2.09
+176396,Quadropolis,,2,4,4,30,60,2.22
+176494,Isle of Skye,Isle of Skye: From Chieftain to King,2,5,3-4,30,50,2.26
+176502,Awesome Kingdom,Awesome Kingdom: The Tower of Hateskull,2,4,4,30,45,1.4
+177478,Iki,,2,4,4,60,90,3.06
+177524,Ice Cool,ICECOOL,2,4,4,30,30,1.06
+177736,Ein Fest für Odin,A Feast for Odin,1,4,3,30,120,3.87
+178570,Unusual Suspects,,3,16,4-6,20,20,1.1
+178900,Codenames,,2,8,"6, 8",15,15,1.25
+178900,Codenames,,2,8,"6, 8",15,15,1.25
+180585,Time Stories: Der Marcy-Fall,T.I.M.E Stories: The Marcy Case,2,4,4,60,90,2.67
+181304,Mysterium,,2,7,5-6,42,42,1.89
+182028,Through the  Ages,Through the Ages: A New Story of Civilization,2,4,3,120,120,4.44
+182874,Grand Austria Hotel,,2,4,2,60,120,3.19
+183006,Qwinto,,2,6,3-4,15,15,1.31
+183251,Karuba,,2,4,4,30,40,1.43
+183394,Viticulture,Viticulture Essential Edition,1,6,3-4,45,90,2.9
+184267,On Mars,,1,4,3,90,150,4.62
+185343,Anachrony,,1,4,3,30,120,3.99
+187377,Vikings gone wild,,2,4,3,45,90,2.22
+189035,Time Stories: Die Drachenprophezeiung,T.I.M.E Stories: A Prophecy of Dragons,2,4,4,90,180,2.64
+189686,Time Stories: Hinter der Maske,T.I.M.E Stories: Under the Mask,2,4,4,90,0,2.46
+191004,Stone Age Junior,My First Stone Age,2,4,3-4,15,15,1.15
+191189,Aeons End,Aeon's End,1,4,2,60,60,2.8
+191862,Imhotep: Baumeister Ägyptens,Imhotep,2,4,4,40,40,2.02
+192135,Too many Bones,,1,4,2,60,120,3.87
+192291,Sushi go Party,Sushi Go Party!,2,8,4-5,20,20,1.33
+193214,Meeple Circus,,2,5,4-5,45,45,1.4
+193527,Time Stories: Die Endurance-Expedition,T.I.M.E Stories: Expedition – Endurance,2,4,4,60,90,2.25
+193738,Great Western Trail,,2,4,3,75,150,3.7
+194655,Santorini,,2,4,2,20,20,1.72
+195162,Plague Inc.,Plague Inc.: The Board Game,1,4,4,60,60,2.14
+196326,Love Letter Big Box,Love Letter: Premium Edition,2,8,4-6,20,30,1.29
+196340,Yokohama,,2,4,3,90,90,3.27
+198298,Panedmic Iberia,I Loot the Cleric's Body,,,,,,
+198773,Codenames Pictures,Codenames: Pictures,2,8,6,15,15,1.23
+198994,Hero Realms,,2,4,2,20,20,1.85
+199042,Harry Potter: Hogwarts Battle,,2,4,"2, 4",30,60,2.08
+199561,Sagrada,,1,4,2,45,45,1.92
+199792,Everdell,,1,4,3,40,80,2.84
+199792,Everdell,,1,4,3,40,80,2.84
+200632,Quango,QANGO,2,2,2,1,10,1.21
+201808,Clank!,Clank!: A Deck-Building Adventure,2,4,3,30,60,2.23
+203993,Lorenzo il Magnificio,Lorenzo il Magnifico,2,4,3-4,60,120,3.3
+204135,Skyjo,,2,8,4,15,45,1.05
+204583,Kingdomino,,2,4,"2, 4",15,25,1.24
+205059,Mansions of Madness,Mansions of Madness: Second Edition,1,5,3-4,120,180,2.69
+205059,Villen des Wahnsins,Mansions of Madness: Second Edition,1,5,3-4,120,180,2.69
+205158,Codenames Undercover,Codenames: Deep Undercover,4,8,"6, 8",15,15,1.32
+205637,Arkham Horror das Kartenspiel,Arkham Horror: The Card Game,1,2,2,60,120,3.57
+205867,Bohnanza Das Duell,Bohnanza: The Duel,2,2,2,45,45,2.04
+205896,Rising Sun,,3,5,4-5,90,120,3.3
+206915,Tempel des Schreckens,,3,10,6-7,15,15,1.14
+206925,Black Dog,,2,4,4,30,45,1.8
+207830,5 Minute Dungeon,5-Minute Dungeon,2,5,4-5,5,30,1.13
+208670,Labyrinth: Paths of Destiny,Labyrinth: Paths of Destiny (Third Edition),2,6,4-6,45,60,2.42
+208804,The captain is dead: lockdown,,1,7,4-5,90,120,2.63
+209010,Mechs and Minions,Mechs vs. Minions,2,4,4,60,120,2.45
+209778,Magic Maze,,1,8,4,15,15,1.75
+213099,Time Stories: Lumen Fidei,T.I.M.E Stories: Lumen Fidei,2,4,4,90,0,2.94
+216132,Clans of Caledonia,,1,4,4,30,120,3.47
+216578,Half-Pint Heroes,,2,7,4,30,30,1.83
+217372,El Dorado,The Quest for El Dorado,2,4,"2, 4",30,60,1.94
+218074,Detective: City of Angels,,1,5,3-4,30,150,2.35
+218129,Catch the Moon,,1,6,3-4,20,20,1
+218530,Tortuga 1667,,2,9,"5, 7",20,40,2.03
+218824,Game of Quotes,Game of Quotes: Verrückte Zitate,3,6,4-6,30,30,1.27
+218863,Ta-ke,,2,2,2,30,30,2.23
+219512,Tudor,,2,4,4,90,120,2.93
+220308,Gaia Project,,1,4,3-4,60,150,4.4
+220517,Shipwreck Arcana,The Shipwreck Arcana,2,5,3-4,10,30,2.21
+220836,Time Stories: Estrella Drive,T.I.M.E Stories: Estrella Drive,2,4,4,90,90,2.21
+220839,Time Stories: Bruderschaft der Küste,T.I.M.E Stories: Brotherhood of the Coast,2,4,4,90,240,2.8
+220877,Rajas of the Ganges,,2,4,4,45,75,2.9
+222514,Batman Gotham City Chronicles,Batman: Gotham City Chronicles,2,4,2,60,90,3.77
+222542,Otys,,1,4,3,60,60,2.91
+224037,Codenames Duett,Codenames: Duet,2,2,2,15,30,1.36
+224517,Brass Birmingham,Brass: Birmingham,2,4,3-4,60,120,3.86
+225694,Decrypto,,3,8,"4, 6",15,45,1.82
+226522,Exit Der Tote im Orient Express,EXIT: The Game – Dead Man on the Orient Express,1,4,2,60,120,2.63
+226610,What do you meme,What Do You Meme?,3,20,6,30,90,1.05
+226610,What do you meme,What Do You Meme?,3,20,6,30,90,1.05
+227026,Debatable,,3,16,"5, 7",30,120,1.13
+229853,Teotihuacan City of Gods,Teotihuacan: City of Gods,1,4,4,90,120,3.78
+230383,Memoarr,Memoarrr!,2,4,4,10,20,1.2
+230802,Azul,,2,4,2,30,45,1.77
+232974,Paco Sako,Paco Ŝako,2,2,2,15,60,2.91
+233078,Twilight Imperium,Twilight Imperium: Fourth Edition,3,6,6,240,480,4.37
+234691,Das Geheimnis der Tempel,Mystery of the Temples,2,4,4,20,40,2.3
+234877,Sebastian Fitzek Safehouse,,2,4,3,30,30,2.06
+235437,Pummel Einhorn Das Kartenspiel,Pummeleinhorn: Das Kartenspiel,2,4,4,15,20,1
+235655,Funkelschatz,Dragon's Breath,2,4,3-4,15,20,1.05
+236457,Architects of the west kingdom,,1,5,4,60,80,2.76
+236485,Die Mumien des Pharao,Pharao,1,4,3-4,30,30,1.5
+237182,Root (+Erweiterung),Root,2,4,4,60,90,3.84
+238094,Mutabo,,3,6,5-6,25,45,1.04
+238546,The Rise of Queensdale,,2,4,4,45,60,2.79
+239074,Color Smash,,2,6,,20,20,1
+241477,Karak,,2,5,3-4,45,45,1.3
+242740,Magic Maze Kids,,2,4,4,15,25,1.63
+244274,Kuala,The Crusoe Crew,1,4,4,45,45,1.31
+244521,Die Quacksaslber von Quedlinburg,Quacks,2,4,4,45,45,1.94
+244522,Ganz schön Clever,That's Pretty Clever!,1,4,2,30,30,1.85
+244992,The Mind,,2,4,4,20,20,1.07
+245136,Bluff,Bluff Jubiläumsausgabe,2,6,4-6,30,30,1.06
+245476,CuBirds,,2,5,3,20,20,1.31
+245643,Luxor,,2,4,3-4,45,45,1.91
+245654,Railroad Ink,Railroad Ink: Deep Blue Edition,1,6,2,20,30,1.47
+246900,Eclipse,Eclipse: Second Dawn for the Galaxy,2,6,"4, 6",60,200,3.67
+247763,Underwater Cities,,1,4,2,80,150,3.59
+248562,Mage Knight Ultimate Edition,Mage Knight: Ultimate Edition,1,5,1,150,150,4.66
+248702,Trivial Pursuit Classic Edition,Trivial Pursuit: Classic Edition,2,6,4,45,90,1.28
+251247,Barrage,,1,4,4,90,180,4.12
+251795,Fix the World,,3,6,4-5,30,60,
+252883,Tokyo Sidekick,,2,4,4,45,60,3
+253214,Escape Tales: The Awakening,,1,4,2,180,360,2.16
+253215,Jetpack Joyride,,1,4,3-4,20,20,1.25
+253344,Cthulu Death May Die,Cthulhu: Death May Die,1,5,3,90,120,2.49
+254226,Unlock,Unlock!: Exotic Adventures,1,6,2,60,90,2.2
+254640,Just One,,3,7,6-7,20,60,1.03
+254640,Just One,,3,7,6-7,20,60,1.03
+255674,Imhotep Duell,Imhotep: The Duel,2,2,2,30,30,1.95
+255984,Sleeping Gods,,1,4,1-2,60,1200,3.26
+256382,Disney Villainous,Disney Villainous: The Worst Takes it All,2,6,3,45,120,2.48
+256916,Concordia Venus,,2,6,4,60,120,3.01
+256960,Pax Pamir,Pax Pamir: Second Edition,1,5,4,45,120,3.84
+257067,Magnastorm,,2,4,4,70,100,3.12
+260605,Camel-Up,Camel Up (Second Edition),3,8,5-6,30,45,1.51
+261114,Men at Work,,2,5,3-4,30,45,1.08
+261165,Flipping Frogs,Flip Over Frog,2,4,4,15,15,1.1
+262388,Qwantum,,2,4,2,15,15,1.27
+262543,Perfect Match,Wavelength,2,12,"6, 8",30,45,1.1
+262994,Valda,,2,5,3,60,150,2.33
+263918,Der Kartograph,Cartographers,1,100,3-4,30,45,1.89
+264055,Draftosaurus,,2,5,4,15,15,1.24
+264220,Tainted Grail,Tainted Grail: The Fall of Avalon,1,4,1-2,60,120,3.37
+264260,Schnitzeljagd,Uh-oh Hippo!,0,0,,0,0,
+264925,Nocturion,,2,4,3,40,70,2.58
+266083,L.L.A.M.A.,,2,6,4-5,20,20,1.05
+266192,Flügelschlag,Wingspan,1,5,3,40,70,2.48
+266217,Time Stories: Madame,T.I.M.E Stories: Madame,2,4,4,90,90,2.67
+266810,Paladins of the west kingdom,,1,4,2,90,120,3.7
+266830,QE,,3,5,5,45,45,1.55
+267378,Chakra,,1,4,2,30,30,1.77
+268864,Undaunted Normandy,Undaunted: Normandy,2,2,2,45,60,2.27
+269207,Die Tavernen im tiefen Thal,The Taverns of Tiefenthal,2,4,2-3,60,60,2.69
+269385,Lord of the Rings Journey in Middleearth,The Lord of the Rings: Journeys in Middle-Earth,1,5,2,60,120,2.7
+269970,Quiztopia,,1,6,4,45,45,1.38
+270673,Silver & Gold,,2,4,3-4,20,20,1.21
+271601,Feed the Kraken,,5,11,8-11,45,90,2.17
+275044,Glow,,2,4,3,45,45,2.09
+275870,Team 3,TEAM3 GREEN,3,6,3,30,30,1.25
+276025,Maracaibo,,1,4,3,30,120,3.92
+276296,Finger Guns,Finger Guns at High Noon,3,8,7,20,20,1.67
+277458,Kluster,,1,4,3,10,20,1.03
+277670,Among Cultists,Among Cultists: A Social Deduction Thriller,4,8,5-8,45,90,2.43
+280136,Paranormal Detectives,,2,6,4-5,30,50,1.67
+281259,The Isle of Cats,,1,4,3,60,90,2.37
+282171,Trial by Trolley,,3,13,"5, 7",30,90,1.02
+282524,Horrified,,1,5,3,60,60,2.02
+283155,Calico,,1,4,2,30,45,2.2
+283317,7th Continent,The 7th Continent: Classic Edition,1,4,1,5,1000,3.18
+283355,Dune,,2,6,6,120,180,3.98
+283393,Aquatica,,1,4,3,30,60,2.32
+284108,Pictures,,3,5,4-5,20,30,1.03
+284378,Kanban EV,,1,4,3,60,180,4.3
+284998,Reigns,Reigns: The Council,3,6,4-5,20,40,1.83
+285774,Marvel Champions,Marvel Champions: The Card Game,1,4,1-2,45,90,2.97
+286096,Tapestry,,1,5,3,90,120,2.98
+286690,Shinjuku,,2,4,4,60,60,2.5
+288276,Tough Calls,Tough Calls: Dystopia,3,5,5,45,60,1.17
+288533,Fish'n'Flip,Fish 'n' Flip,1,6,3,15,30,2.22
+289057,Everdell Bellfaire,Everdell: Bellfaire,1,6,4,40,120,2.81
+290357,Hanabi,Hanabi Deluxe: What a Show!,2,5,4,25,45,2
+290359,Undaunted North Africa,Undaunted: North Africa,2,2,2,45,60,2.35
+291457,Gloomhaven Jaws of the Lion,Gloomhaven: Jaws of the Lion,1,4,2,30,120,3.64
+291572,Oath,,1,6,4,45,150,4.13
+295486,My City,,2,4,4,30,30,1.99
+295947,Cascadia,,1,4,2-3,30,45,1.84
+297129,Jekyll vs. Hyde,,2,2,2,30,30,1.87
+298229,Steampunk Rally Fusion,,2,8,4,45,60,2.81
+298397,Der verzauberte Turm,,2,4,2,10,15,1
+299169,Spicy,,2,6,4-5,15,20,1.29
+300010,Dragomino,,2,4,3-4,15,15,1.06
+300531,Paleo,,2,4,2-3,45,60,2.66
+300905,Top Ten,,4,9,6-7,30,30,1.08
+301767,Mysterium Park,,2,6,4,30,45,1.43
+302520,Hues and Cues,,3,10,"6, 8",30,30,1.06
+307002,Regicide,,1,4,2,10,30,1.98
+309109,Die Säulen der Erde,,2,6,3-4,90,150,2.5
+312459,How am I weird,,3,10,,10,60,
+312484,Lost Ruins of Arnak,,1,4,3,30,120,2.93
+313649,Excalibohn,,3,5,5,45,60,2
+313790,Nemesis Void Seeders Expansion,Nemesis: Void Seeders,1,5,4,90,180,3.25
+316554,Dune Imperium,Dune: Imperium,1,4,3-4,60,120,3.08
+317432,Exit Das verfluchte Labyrinth,EXIT: The Game – The Cursed Labyrinth,1,4,2,45,90,2.5
+317985,Beyond the Sun,,2,4,3,60,120,3.15
+318560,Witchstone,,2,4,3,60,90,2.76
+318977,MicroMacro: Crime City,,1,4,2,15,45,1.11
+320718,Heimliche Herrschaft,Hidden Leaders,2,6,4,20,40,1.83
+324856,Die Crew Mission Tiefsee,The Crew: Mission Deep Sea,2,5,4,20,20,2.06
+326494,Die Abenteuer des Robin Hood,The Adventures of Robin Hood,2,4,2,60,60,1.82
+327778,ito,,2,10,5-6,10,10,1.01
+328479,Living Forest,,1,4,3,40,40,2.22
+328871,Terraforming Mars Ares Expedition,Terraforming Mars: Ares Expedition,1,4,3,45,60,2.93
+329082,Radlands,,2,2,2,20,40,2.26
+329845,Stella,Stella: Dixit Universe,3,6,5-6,30,30,1.17
+330532,Hashi,,1,4,2-3,20,20,1.44
+332772,Revive,,1,4,3,90,120,3.46
+334305,Simons Katze,Simon's Cat: Total Mess,2,8,,10,10,1
+334986,E-Mission,Daybreak,1,4,2,60,120,2.88
+337324,A.D.E.L.E.,,1,5,4-5,90,120,2.94
+338460,Explore and Draw,The Isle of Cats: Explore & Draw,1,6,2-4,30,45,2.2
+338834,Micro Macro Crime City Full House,MicroMacro: Crime City – Full House,1,4,2,15,45,1.17
+338960,Slay the Spire,Slay the Spire: The Board Game,1,4,2,30,150,2.91
+340178,Scipio,Scipio: Sworn Enemy of Hannibal,2,2,2,30,45,2
+340466,Abgrundtief,Unfathomable,3,6,5,120,240,3.13
+342046,Phraya,,2,4,3,90,120,3.05
+342942,Arche Nova,Ark Nova,1,4,2,90,150,3.8
+343578,Girls Fever,,2,12,,5,60,
+346501,Mille Fiori: Im Glanz der Lagune,Mille Fiori,2,4,4,60,90,2.18
+347566,Silk Road Adventures,,1,4,,30,45,2
+349082,Kingscraft,,2,4,2-3,45,60,2.08
+349131,Splitter,,1,12,1-2,15,15,1.12
+351605,Bohnanza,Bohnanza: 25th Anniversary Edition,2,7,4-5,45,45,1.62
+351937,Carla Caramel,,1,6,1-2,10,25,1
+353150,Fyfe,,2,5,2,30,45,2.09
+355987,Lotti Karotti,Funny Bunny,2,4,3-4,30,30,1
+356952,Empire's End,,2,4,3-4,45,60,2.41
+356996,The Border,,2,4,2-3,30,30,1.17
+357674,Kartoffelkönig,Gimme That!,3,8,6,5,10,1
+359029,Nekojima,,1,5,2,15,30,1.1
+359398,Hunch,Hunch!,3,6,6,40,60,2
+359871,Arcs,,2,4,3-4,60,120,3.45
+359893,Riecht verdächtig,Sounds Fishy,4,10,7-8,30,30,1
+359970,Challengers,Challengers!,1,8,"4, 6, 8",45,45,1.78
+362484,Mimic Octopus,,4,8,4,30,30,1
+363307,Evergreen,,1,4,2,45,45,2.13
+364186,Terra Nova,,2,4,3-4,60,90,2.87
+364766,Micro Macro Crime City All In,MicroMacro: Crime City – All In,1,4,2,15,45,1.07
+366013,Heat: Pedal to the metal,,1,6,5-6,30,60,2.2
+366752,The Great Split,,2,7,4-5,45,45,2.05
+367396,Avalon: Big box,,5,10,7-8,30,30,2.18
+368899,Die Magischen Schlüssel,Magic Keys,2,4,3-4,20,30,1.06
+370591,Dorfromantik,Dorfromantik: The Board Game,1,6,1-2,30,60,1.63
+371118,Vip RIP,,3,8,4,20,30,1
+372436,OzeanGo,,2,2,,10,10,1
+373106,Skyteam,Sky Team,2,2,2,20,20,2.04
+375651,That's not a Hat,,3,8,5,15,15,1.06
+375696,Scotland Yard,Scotland Yard: 40 Jahre Jubiläumsedition,2,6,"3, 5",45,60,1.5
+383607,Barcelona,,1,4,3,60,90,3.36
+385761,Faraway,,2,6,3,25,25,1.95
+388036,Zug um Zug Berlin,Ticket To Ride: Berlin,2,4,2,10,15,1.67
+391163,Mischwald,Forest Shuffle,2,5,2,40,60,2.22
+392023,Mycelia: Im Tal der Tausend Tropfen,Mycelia,1,4,2,45,45,1.88
+392492,Stupor Mundi,,1,4,2-3,90,150,3.25
+393325,Captain Flip,,2,5,3,20,20,1.21
+394722,Authority,,5,12,9,45,60,2.5
+394886,Lunar Laser,Lunar Laser Frogs,3,8,7-8,15,15,1
+394887,Surfosaurus Max,,2,6,3,20,20,1.23
+396543,Havalandi,,2,4,3,45,60,2.09
+396822,Die Mäusebande,Le Clan des Souris,2,5,4,15,20,1.67
+397931,Deep regrets,,1,5,3,30,150,2.35
+398162,Micro Macro Crime City Showdown,MicroMacro: Crime City – Showdown,1,4,2,15,45,1
+398771,Die Patin,,2,5,4,60,150,2.67
+399806,Karvi,,2,4,2,120,180,3.39
+399870,Escape,Escape: Flucht von der Karibik-Insel,1,4,1-2,30,60,1
+400856,Cluedo Junior,Clue Junior,2,6,,10,30,
+402283,Hof-Verrat,Courtisans,2,5,4,20,30,1.31
+404427,Mensch ärger dich nicht!,Mensch ärgere Dich nicht,2,6,4,45,60,1
+405537,DroPolter,,2,5,4,20,20,1.02
+406324,Wolkenschiff,Cloudship,2,4,2,20,20,1
+406652,Compile,Compile: Main 1,2,2,2,20,30,2.4
+408383,Kluster duo,,1,2,2,10,20,1
+408727,Siedler von Catan: Energien,Catan: New Energies,3,4,3-4,90,90,2.28
+409581,Neue Ufer,Rivages,1,5,1,20,30,1.77
+410201,Schwingenschlag,Wyrmspan,1,5,3,90,90,2.83
+410273,Balconia,,2,2,2,20,20,1.75
+410695,Nichts als die Wahrheit,,3,6,4-5,30,30,1
+411567,The Gang,,3,6,5,20,20,1.59
+413246,Bomb Busters,,2,5,4,30,30,2.01
+413260,Botanicus,,2,4,3,45,60,2.45
+416851,Castle Combo,,2,5,2,10,25,1.73
+418059,SETI,SETI: Search for Extraterrestrial Intelligence,1,4,3,40,160,3.84
+419639,Krakel Orakel,Mind the Lines,2,8,4-6,30,30,1.1
+419651,Lost in Translation,,2,8,2-6,15,15,
+420229,Sail or Die,,2,5,4-5,20,20,1.25
+421969,Anger Smash,,2,5,,20,40,1
+422042,Tea Garden,,2,4,3,90,120,3.09
+423232,Topp Die Torte,Cherry on the Cake,2,4,3-4,20,20,1.17
+423648,Naishi,,2,2,2,20,20,2.08
+425235,Point of View,Point of View: Lost Places,2,8,4,60,60,1.38
+425549,Moon Colony Bloodbath,,1,5,4,45,90,2.15
+425560,Strange World,Strange World Above the Clouds,1,4,3,10,20,1.96
+427006,Time Trouble,,2,4,2,20,20,2
+428058,Up or Down,Up or Down?,2,6,2,30,30,1.41
+428062,Camargue,,2,6,3-4,45,45,1.29
+428577,Ananda,,2,4,2-3,30,45,1.5
+428578,Die Trödler aus den Highlands,,2,4,3,30,45,2
+429293,Herr der Ringe Die Gefährten,The Lord of the Rings: The Fellowship of the Ring – Trick-Taking Game,1,4,4,20,20,1.91
+429517,Trick 100,,2,6,,10,15,1
+433519,Quiz Challenge Europa,,1,6,,25,25,
+437051,Das Wurmt,,2,5,2,20,30,1
+437106,Simsala Spin,,2,4,3,15,15,1
+438690,Übermorgen,ÜBERmorgen: Ein Spiel um die Zukunft,3,6,,60,120,
+439229,Quiz Me 5,,2,6,,30,30,
+439237,CrazyHeads,Crazy Heads,2,6,,20,20,
+439285,Mega Monster Meals,,2,5,,15,15,
+441731,Moonlight Im Land der Wölfe,Moonlight: The Land of the Wolves,2,2,2,15,30,2
+444489,Burst,,3,6,4-5,30,30,1.13
+447925,Playball,,2,2,2,20,20,1.5
+451577,Size Matters!,,2,6,,10,15,
+453997,Blitz Zebra Astronaut,,2,6,,15,15,
+457011,Furzipups der Knatterdrache: Drachenstarkes Memo-Spiel,,2,4,,10,15,
+463970,One Mind,,2,8,5-6,15,20,1
+,WeKillLeaks,,,,,,,
+,Droptalk,,,,,,,
+,Deep Talk,,,,,,,
+,Magnetspiel Verkleiden und Schütteln,,,,,,,
+,Magnetspiel Zählen und schütteln,,,,,,,
+,Metalknobelein,,,,,,,
+,Cat Stax,,,,,,,
+,Undo,,,,,,,
+,Quartett Heimische Tiere,,,,,,,
+,Flucht vor der roten Pfote,,,,,,,
+,Sprout Scouts,,,,,,,
+,Mein erstes Memory,,,,,,,
+,Memory Paw Patrol,,,,,,,
+,Turbotopia,,,,,,,
+,Spielesammlung,,,,,,,
+,Black Stories Prof. Dr. Michael Tsokos,,,,,,,

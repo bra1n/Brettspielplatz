@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spiele-Etiketten</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #ccc;
+      color: #000;
+      font-family: 'Supersonic Rocketship', sans-serif;
+      font-size: 12pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Toolbar */
+    #controls {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 6px 16px;
+      padding: 8px 12px;
+      background: #fff;
+      border-bottom: 2px solid #000;
+      font-family: system-ui, sans-serif;
+      font-size: 14px;
+    }
+    #controls .group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    #controls button {
+      font: inherit;
+      padding: 4px 10px;
+      border: 2px solid #000;
+      border-radius: 4px;
+      background: #fff;
+      cursor: pointer;
+    }
+    #controls button:hover {
+      background: #000;
+      color: #fff;
+    }
+    #controls button:disabled {
+      opacity: 0.4;
+      cursor: default;
+      background: #fff;
+      color: #000;
+    }
+    #controls input {
+      font: inherit;
+      width: 4.5em;
+      padding: 3px 4px;
+      border: 2px solid #000;
+      border-radius: 4px;
+    }
+    #range-info, #status {
+      color: #444;
+    }
+    #status.error {
+      color: #000;
+      font-weight: bold;
+    }
+
+    /* A4 sheet with 3 x 5 labels of 55 x 55 mm */
+    #sheets {
+      padding: 10mm 0;
+    }
+    .sheet {
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto 10mm;
+      padding: 11mm 22.5mm;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+      display: grid;
+      grid-template-columns: repeat(3, 55mm);
+      grid-template-rows: repeat(5, 55mm);
+      overflow: hidden;
+    }
+
+    .label {
+      width: 55mm;
+      height: 55mm;
+      border: 5mm solid #000;
+      border-radius: 8mm;
+      padding: 1mm;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      cursor: pointer;
+      background: #fff;
+    }
+    .label.hidden {
+      visibility: hidden;
+    }
+    .label.empty {
+      border-color: transparent;
+      cursor: default;
+    }
+
+    .label h2 {
+      width: 100%;
+      margin: 0 0 1mm;
+      font-size: 20pt;
+      line-height: 1.1;
+      overflow-wrap: normal;
+    }
+    .label h2.clamped {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      overflow: hidden;
+      overflow-wrap: anywhere;
+    }
+
+    .label .line {
+      display: block;
+      margin-bottom: 0;
+      white-space: nowrap;
+      font-size: 14pt;
+      line-height: 1.25;
+    }
+    .label .line > i:first-child {
+      width: 1.3em;
+      text-align: center;
+    }
+
+    .label .neutral {
+      margin-left: 0.3em;
+    }
+    .label .stars i {
+      margin: 0;
+    }
+
+    @media print {
+      html, body {
+        background: #fff;
+      }
+      #controls {
+        display: none;
+      }
+      #sheets {
+        padding: 0;
+      }
+      .sheet {
+        margin: 0;
+        box-shadow: none;
+        break-after: page;
+        page-break-after: always;
+      }
+      .sheet:last-child {
+        break-after: auto;
+        page-break-after: auto;
+      }
+      .label {
+        cursor: default;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <div class="group">
+      <button id="prev" title="Vorherige Seite (←)"><i class="fa-solid fa-chevron-left"></i></button>
+      Seite <input id="page" type="number" min="1" value="1"> / <span id="page-count">–</span>
+      <button id="next" title="Nächste Seite (→)"><i class="fa-solid fa-chevron-right"></i></button>
+      <span id="range-info"></span>
+    </div>
+    <div class="group">
+      <button id="print-current"><i class="fa-solid fa-print"></i> Diese Seite drucken</button>
+    </div>
+    <div class="group">
+      Seiten <input id="print-from" type="number" min="1" value="1"> bis <input id="print-to" type="number" min="1">
+      <button id="print-range"><i class="fa-solid fa-print"></i> Drucken</button>
+    </div>
+    <div class="group">
+      <button id="show-all" title="Per Klick ausgeblendete Etiketten wieder anzeigen" disabled><i class="fa-solid fa-eye"></i> <span id="hidden-count">Keine ausgeblendet</span></button>
+      <span id="status">Lade Tabelle…</span>
+    </div>
+  </div>
+
+  <div id="sheets"></div>
+
+  <script>
+    const SHEET_ID = '15-zQLHHVvnLDGJsT0mfF4O7eM6E4VSF8NakVE_hEPh0'
+    const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json`
+    const PER_PAGE = 15
+    const NEUTRAL_ICON = 'fa-solid fa-thumbs-up'
+    // Full names for language codes from the "Sprache" column
+    const LANGUAGES = {
+      DE: 'Deutsch',
+      EN: 'Englisch',
+    }
+
+    const $ = (id) => document.getElementById(id)
+
+    let games = []
+    let page = 0
+    const hiddenLabels = new Set() // indexes of labels hidden by clicking them
+
+    // --- Data loading ------------------------------------------------------
+
+    // fetch() works on a web server; Google sends no CORS header for file:// pages,
+    // so fall back to loading the sheet as JSONP via a script tag there.
+    async function loadSheet() {
+      try {
+        const res = await fetch(SHEET_URL)
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        const text = await res.text()
+        return JSON.parse(text.slice(text.indexOf('{'), text.lastIndexOf('}') + 1))
+      } catch (err) {
+        console.info('fetch failed, falling back to JSONP:', err.message)
+        return loadSheetJsonp()
+      }
+    }
+
+    function loadSheetJsonp() {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        window.__sheetCb = (data) => {
+          delete window.__sheetCb
+          script.remove()
+          resolve(data)
+        }
+        script.onerror = () => reject(new Error('Tabelle konnte nicht geladen werden'))
+        script.src = SHEET_URL.replace('tqx=out:json', 'tqx=out:json;responseHandler:__sheetCb')
+        document.head.appendChild(script)
+      })
+    }
+
+    function parseGames(data) {
+      const cols = data.table.cols.map((c) => c.label.trim())
+      const col = (label) => {
+        const i = cols.indexOf(label)
+        if (i < 0) throw new Error(`Spalte "${label}" fehlt in der Tabelle`)
+        return i
+      }
+      const idx = {
+        name: col('Name'),
+        bggId: col('BGG ID'),
+        neutral: col('Sprachneutral'),
+        language: col('Sprache'),
+        minPlayers: col('Spieler Min'),
+        maxPlayers: col('Spieler Max'),
+        minTime: col('Zeit Min'),
+        maxTime: col('Zeit Max'),
+        complexity: col('Komplexität'),
+      }
+      return data.table.rows
+        .map(({ c }) => {
+          const v = (key) => c[idx[key]]?.v ?? null
+          return {
+            name: String(v('name') ?? '').trim(),
+            bggId: v('bggId'),
+            neutral: v('neutral') === true || String(v('neutral')).toUpperCase() === 'TRUE',
+            language: String(v('language') ?? '').trim(),
+            minPlayers: v('minPlayers'),
+            maxPlayers: v('maxPlayers'),
+            minTime: v('minTime'),
+            maxTime: v('maxTime'),
+            complexity: v('complexity'),
+          }
+        })
+        .filter((g) => g.name && g.bggId) // games without BGG ID get no label
+    }
+
+    // --- Rendering ---------------------------------------------------------
+
+    const escapeHtml = (s) => String(s).replace(/[&<>"']/g, (ch) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+    })[ch])
+
+    const isSet = (v) => v !== null && v !== ''
+
+    function formatRange(min, max, unit = '') {
+      if (!isSet(min) && !isSet(max)) return null
+      if (!isSet(min) || !isSet(max) || String(min) === String(max)) return `${isSet(min) ? min : max}${unit}`
+      return `${min} - ${max}${unit}` // the font has no en dash
+    }
+
+    function renderStars(complexity) {
+      if (!isSet(complexity) || isNaN(parseFloat(complexity))) return null
+      let stars = ''
+      const rating = Math.round((parseFloat(complexity) - 1) / 0.4) / 2
+      for (let x = 0; x < 5; x++) {
+        if (rating > x + 0.5) {
+          stars += '<i class="fa-solid fa-star"></i>'
+        } else if (rating == x + 0.5) {
+          stars += '<i class="fa-solid fa-star-half-stroke"></i>'
+        } else {
+          stars += '<i class="fa-regular fa-star"></i>'
+        }
+      }
+      return stars
+    }
+
+    // "DE" → "Deutsch", "DE/EN" → "DE / EN", "-" or empty → no line
+    function renderLanguage(language, neutral) {
+      const codes = language.split(/[\/,]/).map((c) => c.trim().toUpperCase()).filter((c) => c && c !== '-')
+      if (!codes.length) return null
+      const text = codes.length === 1 ? (LANGUAGES[codes[0]] ?? codes[0]) : codes.join(' / ')
+      const neutralIcon = neutral ? `<i class="${NEUTRAL_ICON} neutral" title="sprachneutral"></i>` : ''
+      return `<i class="fa-solid fa-globe-americas"></i>${escapeHtml(text)}${neutralIcon}`
+    }
+
+    function renderLabel(game, index) {
+      const language = renderLanguage(game.language, game.neutral)
+      const players = formatRange(game.minPlayers, game.maxPlayers)
+      const time = formatRange(game.minTime, game.maxTime, ' min')
+      const stars = renderStars(game.complexity)
+
+      const label = document.createElement('div')
+      label.className = 'label' + (hiddenLabels.has(index) ? ' hidden' : '')
+      label.innerHTML = `
+        <h2>${escapeHtml(game.name)}</h2>
+        ${language ? `<span class="line">${language}</span>` : ''}
+        ${players ? `<span class="line"><i class="fa-solid fa-users"></i> ${escapeHtml(players)}</span>` : ''}
+        ${time ? `<span class="line"><i class="fa-regular fa-clock"></i> ${escapeHtml(time)}</span>` : ''}
+        ${stars ? `<span class="line"><i class="fa-solid fa-flask"></i><span class="stars">${stars}</span></span>` : ''}
+      `
+      // Clicking a label hides it, e.g. to skip already used spots on a label sheet
+      label.addEventListener('click', () => {
+        label.classList.toggle('hidden')
+        if (label.classList.contains('hidden')) hiddenLabels.add(index)
+        else hiddenLabels.delete(index)
+        updateHiddenCount()
+      })
+      return label
+    }
+
+    function updateHiddenCount() {
+      const n = hiddenLabels.size
+      $('hidden-count').textContent = n ? `${n} ausgeblendete zeigen` : 'Keine ausgeblendet'
+      $('show-all').disabled = n === 0
+    }
+
+    function renderSheet(pageIndex) {
+      const sheet = document.createElement('div')
+      sheet.className = 'sheet'
+      const start = pageIndex * PER_PAGE
+      for (let i = start; i < start + PER_PAGE; i++) {
+        if (i < games.length) {
+          sheet.appendChild(renderLabel(games[i], i))
+        } else {
+          const empty = document.createElement('div')
+          empty.className = 'label empty'
+          sheet.appendChild(empty)
+        }
+      }
+      return sheet
+    }
+
+    // Height taken up by all children of a label, including their margins
+    function contentHeight(label) {
+      let height = 0
+      for (const child of label.children) {
+        const style = getComputedStyle(child)
+        height += child.getBoundingClientRect().height + parseFloat(style.marginTop) + parseFloat(style.marginBottom)
+      }
+      return height
+    }
+
+    // Fit the label content: info lines shrink to stay on one line, then the game name
+    // shrinks until it fits in two lines and the label's height; at the minimum size it is cut off
+    function fitNames(root) {
+      const MAX_SIZE = 20
+      const MIN_SIZE = 10
+      const LINE_SIZE = 14
+      for (const line of root.querySelectorAll('.label .line')) {
+        let size = LINE_SIZE
+        line.style.fontSize = ''
+        while (line.scrollWidth > line.clientWidth && size > 8) {
+          size -= 0.5
+          line.style.fontSize = `${size}pt`
+        }
+      }
+      for (const h2 of root.querySelectorAll('.label h2')) {
+        const label = h2.parentElement
+        const labelStyle = getComputedStyle(label)
+        const available = label.clientHeight - parseFloat(labelStyle.paddingTop) - parseFloat(labelStyle.paddingBottom)
+        let size = MAX_SIZE
+        h2.classList.remove('clamped')
+        h2.style.fontSize = `${size}pt`
+        const tooBig = () => h2.scrollWidth > h2.clientWidth + 1
+          || h2.scrollHeight > parseFloat(getComputedStyle(h2).lineHeight) * 2 + 1
+          || contentHeight(label) > available + 1
+        while (tooBig() && size > MIN_SIZE) {
+          size -= 0.5
+          h2.style.fontSize = `${size}pt`
+        }
+        if (tooBig()) h2.classList.add('clamped')
+      }
+    }
+
+    function renderPages(from, to) {
+      const container = $('sheets')
+      container.innerHTML = ''
+      for (let p = from; p <= to; p++) container.appendChild(renderSheet(p))
+      fitNames(container)
+    }
+
+    const pageCount = () => Math.max(1, Math.ceil(games.length / PER_PAGE))
+
+    function showPage(p) {
+      page = Math.min(Math.max(0, p), pageCount() - 1)
+      renderPages(page, page)
+      $('page').value = page + 1
+      $('prev').disabled = page === 0
+      $('next').disabled = page === pageCount() - 1
+      const first = page * PER_PAGE + 1
+      const last = Math.min(games.length, first + PER_PAGE - 1)
+      $('range-info').textContent = `(Spiele ${first}–${last} von ${games.length})`
+      history.replaceState(null, '', `#page=${page + 1}`)
+    }
+
+    // --- Printing ----------------------------------------------------------
+
+    function printRange() {
+      const count = pageCount()
+      let from = parseInt($('print-from').value, 10) || 1
+      let to = parseInt($('print-to').value, 10) || count
+      from = Math.min(Math.max(1, from), count)
+      to = Math.min(Math.max(from, to), count)
+      $('print-from').value = from
+      $('print-to').value = to
+      renderPages(from - 1, to - 1)
+      // Give the browser a moment to lay out all sheets before opening the dialog
+      requestAnimationFrame(() => setTimeout(() => window.print(), 50))
+    }
+
+    // Restore the single page view after printing a range
+    window.addEventListener('afterprint', () => {
+      if ($('sheets').children.length > 1) showPage(page)
+    })
+
+    // --- Init --------------------------------------------------------------
+
+    $('prev').addEventListener('click', () => showPage(page - 1))
+    $('next').addEventListener('click', () => showPage(page + 1))
+    $('page').addEventListener('change', (e) => showPage((parseInt(e.target.value, 10) || 1) - 1))
+    $('print-current').addEventListener('click', () => {
+      if ($('sheets').children.length > 1) showPage(page)
+      window.print()
+    })
+    $('print-range').addEventListener('click', printRange)
+    $('show-all').addEventListener('click', () => {
+      hiddenLabels.clear()
+      document.querySelectorAll('.label.hidden').forEach((l) => l.classList.remove('hidden'))
+      updateHiddenCount()
+    })
+    document.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT') return
+      if (e.key === 'ArrowLeft') showPage(page - 1)
+      if (e.key === 'ArrowRight') showPage(page + 1)
+    })
+
+    async function init() {
+      try {
+        games = parseGames(await loadSheet())
+        await document.fonts.ready
+        $('page-count').textContent = pageCount()
+        $('page').max = pageCount()
+        $('print-to').value = pageCount()
+        $('status').textContent = ''
+        const fromHash = parseInt((location.hash.match(/page=(\d+)/) || [])[1], 10)
+        showPage((fromHash || 1) - 1)
+      } catch (err) {
+        console.error(err)
+        $('status').textContent = `Fehler: ${err.message}`
+        $('status').classList.add('error')
+      }
+    }
+
+    init()
+  </script>
+</body>
+</html>
