@@ -112,8 +112,9 @@
       cursor: pointer;
       background: #fff;
     }
+    /* Clicked labels are faded out on screen and left out when printing */
     .label.hidden {
-      visibility: hidden;
+      opacity: 0.2;
     }
     .label.empty {
       border-color: transparent;
@@ -122,7 +123,7 @@
 
     .label h2 {
       width: 100%;
-      margin: 0 0 1mm;
+      margin: 0;
       font-size: 20pt;
       line-height: 1.1;
       overflow-wrap: normal;
@@ -130,8 +131,8 @@
     .label h2.clamped {
       display: -webkit-box;
       -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
       overflow: hidden;
       overflow-wrap: anywhere;
     }
@@ -178,6 +179,9 @@
       .label {
         cursor: default;
       }
+      .label.hidden {
+        visibility: hidden;
+      }
     }
   </style>
 </head>
@@ -197,7 +201,6 @@
       <button id="print-range"><i class="fa-solid fa-print"></i> Drucken</button>
     </div>
     <div class="group">
-      <button id="show-all" title="Per Klick ausgeblendete Etiketten wieder anzeigen" disabled><i class="fa-solid fa-eye"></i> <span id="hidden-count">Keine ausgeblendet</span></button>
       <span id="status">Lade Tabelle…</span>
     </div>
   </div>
@@ -208,7 +211,7 @@
     const SHEET_ID = '15-zQLHHVvnLDGJsT0mfF4O7eM6E4VSF8NakVE_hEPh0'
     const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json`
     const PER_PAGE = 15
-    const NEUTRAL_ICON = 'fa-solid fa-thumbs-up'
+    const NEUTRAL_ICON = 'fa-solid fa-puzzle-piece'
     // Full names for language codes from the "Sprache" column
     const LANGUAGES = {
       DE: 'Deutsch',
@@ -323,14 +326,14 @@
       if (!codes.length) return null
       const text = codes.length === 1 ? (LANGUAGES[codes[0]] ?? codes[0]) : codes.join(' / ')
       const neutralIcon = neutral ? `<i class="${NEUTRAL_ICON} neutral" title="sprachneutral"></i>` : ''
-      return `<i class="fa-solid fa-globe-americas"></i>${escapeHtml(text)}${neutralIcon}`
+      return `<i class="fa-solid fa-book"></i>${escapeHtml(text)}${neutralIcon}`
     }
 
     function renderLabel(game, index) {
       const language = renderLanguage(game.language, game.neutral)
       const players = formatRange(game.minPlayers, game.maxPlayers)
       const time = formatRange(game.minTime, game.maxTime, ' min')
-      const stars = renderStars(game.complexity)
+      const stars = ''; //renderStars(game.complexity)
 
       const label = document.createElement('div')
       label.className = 'label' + (hiddenLabels.has(index) ? ' hidden' : '')
@@ -341,20 +344,14 @@
         ${time ? `<span class="line"><i class="fa-regular fa-clock"></i> ${escapeHtml(time)}</span>` : ''}
         ${stars ? `<span class="line"><i class="fa-solid fa-flask"></i><span class="stars">${stars}</span></span>` : ''}
       `
-      // Clicking a label hides it, e.g. to skip already used spots on a label sheet
+      // Clicking a label toggles it: faded out on screen and not printed, e.g. to skip
+      // already used spots on a label sheet
       label.addEventListener('click', () => {
         label.classList.toggle('hidden')
         if (label.classList.contains('hidden')) hiddenLabels.add(index)
         else hiddenLabels.delete(index)
-        updateHiddenCount()
       })
       return label
-    }
-
-    function updateHiddenCount() {
-      const n = hiddenLabels.size
-      $('hidden-count').textContent = n ? `${n} ausgeblendete zeigen` : 'Keine ausgeblendet'
-      $('show-all').disabled = n === 0
     }
 
     function renderSheet(pageIndex) {
@@ -386,8 +383,8 @@
     // Fit the label content: info lines shrink to stay on one line, then the game name
     // shrinks until it fits in two lines and the label's height; at the minimum size it is cut off
     function fitNames(root) {
-      const MAX_SIZE = 20
-      const MIN_SIZE = 10
+      const MAX_SIZE = 22
+      const MIN_SIZE = 12
       const LINE_SIZE = 14
       for (const line of root.querySelectorAll('.label .line')) {
         let size = LINE_SIZE
@@ -405,7 +402,7 @@
         h2.classList.remove('clamped')
         h2.style.fontSize = `${size}pt`
         const tooBig = () => h2.scrollWidth > h2.clientWidth + 1
-          || h2.scrollHeight > parseFloat(getComputedStyle(h2).lineHeight) * 2 + 1
+          || h2.scrollHeight > parseFloat(getComputedStyle(h2).lineHeight) * 3 + 1
           || contentHeight(label) > available + 1
         while (tooBig() && size > MIN_SIZE) {
           size -= 0.5
@@ -466,11 +463,6 @@
       window.print()
     })
     $('print-range').addEventListener('click', printRange)
-    $('show-all').addEventListener('click', () => {
-      hiddenLabels.clear()
-      document.querySelectorAll('.label.hidden').forEach((l) => l.classList.remove('hidden'))
-      updateHiddenCount()
-    })
     document.addEventListener('keydown', (e) => {
       if (e.target.tagName === 'INPUT') return
       if (e.key === 'ArrowLeft') showPage(page - 1)
