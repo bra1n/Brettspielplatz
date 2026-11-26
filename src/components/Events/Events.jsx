@@ -45,7 +45,7 @@ export default function Events() {
         <p className="justified">
           Wir spielen mit euch ein angeleitetes Social-Deduction-Spiel, bei dem ihr in 90 bis 180 Minuten
           lernt, welchen Kollegen man vertrauen kann und wer lügt, ohne dabei das Gesicht zu verziehen.
-          Dafür habt ihr das ganze Café für euch und spielt bis spätestens 16 Uhr mit 10 bis 30 Personen - alles
+          Ihr könnt entweder vor 16 Uhr mit mindestens 25 Personen oder nach 16 Uhr mit mindestens 10 Personen spielen - alles
           zum Festpreis und inklusive Snacks und Getränke. Wer will, darf auch gerne auf eigene Kosten ein Catering oder Mittagessen
           organisieren und in den Laden bringen lassen. Schreibt uns bei Interesse einfach eine Mail
           an <a href="mailto:kontakt@brettspielplatz.berlin" target="_blank">kontakt@brettspielplatz.berlin</a>. Wir freuen uns auf euch!
